@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<br>
+<br>
+<div class="row valign-wrapper">
+    <div class="col m9">
+      <h4 class="headinguploadCard left valign-wrapper" style="color:black"> <i class="medium material-icons left">file_upload</i> Upload your Card</h4>
+    </div>
+    <div class="col m3">
+        <a class="waves-effect waves-light btn right" id="uploadCard">Upload</a>
+    </div>
+  </div>
+<br>
+<br>
+
+<script type="text/javascript"  src="{{url_for('static', filename='js/main.js')}}"></script>
+
+{% endblock %}

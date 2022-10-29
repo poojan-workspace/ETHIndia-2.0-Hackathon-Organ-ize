@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<!-- <h3>Private Key</h3>
+
+<h3></h3> -->
+
+<br>
+<br>
+<div class="row valign-wrapper">
+    <div class="col m12">
+      <h4 class="left valign-wrapper" style="color:#e91e63;"> <i class="medium material-icons left">lock_open</i> Decrypt the Organ donation Contract</h4>
+    </div>
+  </div>
+
+  <ul class="collection with-header z-depth-1">
+    <li class="collection-header"><h6 style="color:#e91e63;">Ciphertext</h6></li>
+    <li class="collection-item"><div><h6>{{ data.ciphertext }}</h6><a href="#!" class="secondary-content"></a></div></li>
+</ul>
+
+<ul class="collection with-header z-depth-1">
+    <li class="collection-header"><h6 style="color:#e91e63;">Capsule</h6></li>
+    <li class="collection-item"><div>{{ data.capsule }}<a href="#!" class="secondary-content"></a></div></li>
+</ul>
+        
+
+
+  <div class="row collection z-depth-1">
+    <form class="col s12 collection-item" method="POST">
+      <div class="row">
+          <div class="input-field col s12">
+            <input id="person_privKey" name="bobPrivKey" type="text">
+            <label for="person_privKey">Hospital's Private Key</label>
+          </div>
+          <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>        
+      </div>
+    </form>
+  </div>
+
+  <ul class="collection with-header z-depth-1">
+    <li class="collection-header"><h6 style="color:#e91e63;">Decrypted text</h6></li>
+    <li class="collection-item"><div><h6>{{ plainBobtext }}</h6><a href="#!" class="secondary-content"></a></div></li>
+</ul>
+      
+        
+
+<script type="text/javascript"  src="{{url_for('static', filename='js/main.js')}}"></script>
+
+{% endblock %}

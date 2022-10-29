@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<!-- <h3>Private Key</h3>
+
+<h3></h3> -->
+
+<br>
+<br>
+<div class="row valign-wrapper">
+    <div class="col m12">
+      <h4 class="left valign-wrapper" style="color:#e91e63;"> <i class="medium material-icons left">visibility</i> Grant Access To Hospital</h4>
+    </div>
+  </div>
+
+
+  <div class="row card">
+    <form class="col s12 card-content" method="POST">
+      <div class="row">
+        <div class="input-field col s12">
+            <input id="person_pubKey" name="bobPubKey" type="text">
+            <label for="person_pubKey">Recipient's Public Key</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="person_privKey" name="alicePrivKey" type="text">
+            <label for="person_privKey">Your Private Key</label>
+          </div>
+          <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>        
+      </div>
+    </form>
+  </div>
+        
+
+<script type="text/javascript"  src="{{url_for('static', filename='js/main.js')}}"></script>
+
+{% endblock %}

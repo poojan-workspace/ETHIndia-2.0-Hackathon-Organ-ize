@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<!-- <h3>Private Key</h3>
+
+<h3></h3> -->
+
+<br>
+<br>
+<div class="row valign-wrapper">
+    <div class="col m10">
+      <h4 class="headinguploadCard left valign-wrapper" style="color:#e91e63"> <i class="medium material-icons left">lock_outline</i> Encrypt your organ donation contract</h4>
+    </div>
+    <div class="col m2">
+        <button class="btn waves-effect waves-light right goToListContract" type="button"><a href="/gen_keys"
+                style="color:white">Get Keys
+                <i class="material-icons right">vpn_key</i></a>
+        </button>
+    </div>
+  </div>
+
+
+  <div class="row card">
+    <form class="col s12 card-content" method="POST">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" name="plaintext" type="text">
+          <label for="email">Contract To Encrypt</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="person_pubKey" name="person_pubKey" type="text">
+            <label for="person_pubKey">Your Public Key</label>
+          </div>
+          <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>        
+      </div>
+    </form>
+  </div>
+        
+
+<script type="text/javascript"  src="{{url_for('static', filename='js/main.js')}}"></script>
+
+{% endblock %}
